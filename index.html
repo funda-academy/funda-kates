@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>funda-kates — Learn Kubernetes. Get Job-Ready.</title>
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Inter:wght@300;400;500&family=Space+Mono:wght@700&display=swap" rel="stylesheet"/>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E2LEM490K9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E2LEM490K9');
+</script>
 <style>
   :root {
     --ink: #1c1c1a;
@@ -398,6 +406,9 @@
               <option>Other</option>
             </select>
           </div>
+          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"/>
+          <div class="g-recaptcha" data-sitekey="6LdXjtcsAAAAAIroq5kjoTUBMJIfuc0GY6J6qw2j" style="margin-bottom:1rem;"></div>
+          <p id="captcha-error" style="display:none;color:#c0392b;font-size:0.85rem;margin:-0.5rem 0 0.75rem;">Please complete the CAPTCHA before submitting.</p>
           <button type="submit" class="submit-btn">Register interest →</button>
           <p class="form-note">No payment required at this stage.</p>
         </form>
@@ -423,6 +434,17 @@
     });
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  document.querySelector('form').addEventListener('submit', function(e) {
+    if (this.querySelector('[name="website"]').value !== '') {
+      e.preventDefault();
+      return;
+    }
+    if (!grecaptcha.getResponse()) {
+      e.preventDefault();
+      document.getElementById('captcha-error').style.display = 'block';
+    }
+  });
 </script>
 </body>
 </html>
