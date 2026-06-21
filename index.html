@@ -167,6 +167,24 @@
   }
   .fade-in { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
   .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  #faq { background: var(--surface-alt); }
+  .faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+  .faq-item { border-bottom: 1px solid var(--border); background: var(--surface); }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q { font-family: var(--serif); font-size: 1rem; font-weight: 700; color: var(--ink); padding: 1.25rem 2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; }
+  .faq-q::after { content: '+'; font-family: var(--sans); font-size: 1.2rem; font-weight: 300; color: var(--ink-faint); transition: transform 0.2s; }
+  .faq-item.open .faq-q::after { transform: rotate(45deg); }
+  .faq-a { font-size: 0.875rem; color: var(--ink-muted); line-height: 1.7; padding: 0 2rem 1.25rem; display: none; }
+  .faq-item.open .faq-a { display: block; }
+  .faq-a a { color: var(--accent); text-decoration: none; }
+  .faq-a a:hover { text-decoration: underline; }
+  .faq-section-toggle { cursor: pointer; user-select: none; display: flex; justify-content: space-between; align-items: center; }
+  .faq-section-toggle:hover { opacity: 0.8; }
+  .faq-toggle-icon { font-family: var(--sans); font-size: 1.4rem; font-weight: 300; color: var(--ink-faint); transition: transform 0.2s; }
+  .faq-section-collapsed .faq-toggle-icon { transform: rotate(45deg); }
+  .faq-section-collapsed .faq-list { display: none; }
+  .faq-section-collapsed .section-intro { display: none; }
 </style>
 </head>
 <body>
@@ -177,6 +195,7 @@
     <li><a href="#curriculum">Curriculum</a></li>
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="#cohort">Cohort 1</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#signup" class="nav-cta">Register interest</a></li>
   </ul>
 </nav>
@@ -188,7 +207,7 @@
   <p class="hero-byline">Built by a Senior DevOps engineer with 7+ years of Kubernetes experience</p>
   <div class="hero-cta-wrap">
     <a href="#signup" class="btn-primary">Register for Cohort 1</a>
-    <span class="btn-hint">No payment required &middot; Cohort dates coming soon</span>
+    <span class="btn-hint">Registrations open 29 June &middot; Cohort starts 4 August 2026</span>
   </div>
   <hr class="hero-divider"/>
   <div class="hero-stats fade-in">
@@ -343,18 +362,20 @@
   <div class="container">
     <p class="section-label">Schedule</p>
     <h2>Cohort 1</h2>
-    <p class="section-intro">Our first cohort is in the works. Register your interest now and we'll notify you the moment dates are confirmed.</p>
+    <p class="section-intro">Cohort 1 runs 4–28 August 2026. Registrations open 29 June — seats are limited.</p>
     <div class="cohort-box fade-in">
       <div class="cohort-header">
         <h3>Cohort 1 — Online</h3>
-        <div class="cohort-status"><span class="dot"></span>Accepting registrations</div>
+        <div class="cohort-status"><span class="dot"></span>Registrations open 29 June</div>
       </div>
       <div class="cohort-body">
         <div class="cohort-details">
-          <div class="cohort-detail"><label>Start date</label><span class="tbd">TBC</span></div>
-          <div class="cohort-detail"><label>Duration</label><span>4 weeks</span></div>
+          <div class="cohort-detail"><label>Start date</label><span>4 August 2026</span></div>
+          <div class="cohort-detail"><label>End date</label><span>28 August 2026</span></div>
+          <div class="cohort-detail"><label>Schedule</label><span>Tue &amp; Thu · 18:00–20:00 SAST</span></div>
           <div class="cohort-detail"><label>Format</label><span>Online · Live</span></div>
           <div class="cohort-detail"><label>Seats</label><span>Limited</span></div>
+          <div class="cohort-detail"><label>Recordings</label><span>Available</span></div>
         </div>
         <a href="#signup" class="btn-primary">Register your interest</a>
       </div>
@@ -368,7 +389,7 @@
       <div class="signup-copy">
         <p class="section-label">Register</p>
         <h2>Secure your spot</h2>
-        <p>Fill in your details and we'll be in touch with cohort dates, confirmed pricing, and next steps.</p>
+        <p>Registrations are open. Fill in your details and we'll send your invoice and cohort details by return.</p>
         <div class="assurance">No payment required at this stage. We'll confirm all details before any commitment is made.</div>
       </div>
       <div class="fade-in">
@@ -418,6 +439,44 @@
   </div>
 </section>
 
+<section id="faq">
+  <div class="container">
+    <p class="section-label">FAQ</p>
+    <h2 class="faq-section-toggle">Common questions <span class="faq-toggle-icon">−</span></h2>
+    <p class="section-intro">Everything you need to know before registering.</p>
+    <div class="faq-list fade-in">
+      <div class="faq-item">
+        <div class="faq-q">When does Cohort 1 run?</div>
+        <div class="faq-a">4–28 August 2026. Live sessions every Tuesday and Thursday, 18:00–20:00 SAST.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What if I miss a session?</div>
+        <div class="faq-a">All sessions are recorded and made available after each class.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What do I need to know before joining?</div>
+        <div class="faq-a">Basic Linux command-line comfort and some software development experience. You don't need prior Kubernetes knowledge.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do I get a certificate?</div>
+        <div class="faq-a">Yes. A certificate of completion is issued to every participant who completes the capstone project.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How do I secure my spot?</div>
+        <div class="faq-a">Register your interest above. You'll receive an invoice by return — your place is confirmed once payment is received. Places are filled on a first-come, first-served basis.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Why is the student price lower?</div>
+        <div class="faq-a">We want the programme to be accessible. Students pay R750 with a valid student card. Early professionals pay R1,500. Same course, same certificate.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">I have more questions.</div>
+        <div class="faq-a">Email us at <a href="mailto:mziyabo@funda.academy">mziyabo@funda.academy</a> and we'll get back to you.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <div class="footer-wrap">
   <a href="#" class="footer-logo">Funda-Kates</a>
   <div class="footer-links">
@@ -435,6 +494,14 @@
     });
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => q.closest('.faq-item').classList.toggle('open'));
+  });
+
+  const faqSection = document.getElementById('faq');
+  const faqToggle = faqSection.querySelector('.faq-section-toggle');
+  faqToggle.addEventListener('click', () => faqSection.classList.toggle('faq-section-collapsed'));
 
   document.querySelector('form').addEventListener('submit', function(e) {
     if (this.querySelector('[name="website"]').value !== '') {
