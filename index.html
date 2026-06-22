@@ -45,6 +45,8 @@
   nav ul { list-style: none; display: flex; gap: 2.5rem; align-items: center; }
   nav ul a { font-size: 0.875rem; color: var(--ink-muted); text-decoration: none; font-weight: 400; transition: color 0.2s; }
   nav ul a:hover { color: var(--ink); }
+  .nav-academy { font-size: 0.78rem; color: var(--ink-faint) !important; font-weight: 400 !important; }
+  .nav-academy:hover { color: var(--accent) !important; }
   .nav-cta { background: var(--accent) !important; color: #fff !important; padding: 0.5rem 1.25rem !important; border-radius: 6px !important; font-weight: 500 !important; transition: background 0.2s !important; }
   .nav-cta:hover { background: var(--accent-hover) !important; }
 
@@ -154,6 +156,8 @@
   .footer-links { display: flex; gap: 1.5rem; }
   .footer-links a { font-size: 0.8rem; color: var(--ink-faint); text-decoration: none; }
   .footer-links a:hover { color: var(--accent); }
+  .footer-academy { font-size: 0.78rem; color: var(--ink-faint); text-decoration: none; transition: color 0.2s; }
+  .footer-academy:hover { color: var(--accent); }
   .footer-copy { font-size: 0.78rem; color: var(--ink-faint); }
 
   @media (max-width: 720px) {
@@ -197,6 +201,7 @@
     <li><a href="#cohort">Cohort 1</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#signup" class="nav-cta">Register interest</a></li>
+    <li><a href="https://www.funda.academy" class="nav-academy">↩ Funda-Academy</a></li>
   </ul>
 </nav>
 
@@ -484,7 +489,7 @@
     <a href="#pricing">Pricing</a>
     <a href="mailto:mziyabo@funda.academy">mziyabo@funda.academy</a>
   </div>
-  <span class="footer-copy">© 2026 Funda-Kates</span>
+  <span class="footer-copy">© 2026 Funda-Kates · <a href="https://www.funda.academy" class="footer-academy">Part of Funda-Academy</a></span>
 </div>
 
 <script>
