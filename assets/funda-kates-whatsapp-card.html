@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Funda-Kates — WhatsApp Card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0a0a0a; display: flex; justify-content: center; align-items: flex-start; min-height: 100vh; padding: 40px 20px; font-family: Inter, Arial, sans-serif; }
+    .card { background: #111111; max-width: 400px; width: 100%; border-radius: 12px; overflow: hidden; border: 0.5px solid #2a2a2a; }
+    .card-header { background: #d4502a; padding: 22px 22px 18px; }
+    .brand { display: flex; align-items: center; gap: 10px; flex-wrap: nowrap; margin-bottom: 14px; }
+    .logo-wrap { flex-shrink: 0; width: 34px; height: 34px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+    .logo-wrap img { height: 34px; width: auto; max-width: none; display: block; }
+    .wordmark { font-size: 20px; font-weight: 700; color: #fff; white-space: nowrap; letter-spacing: -0.02em; }
+    .title { font-size: 22px; font-weight: 700; color: #ffffff; line-height: 1.2; }
+    .subtitle { font-size: 13px; color: rgba(255,255,255,0.75); margin-top: 4px; }
+    .card-body { padding: 18px 22px; }
+    .desc { font-size: 14px; color: #b0aea8; line-height: 1.7; margin-bottom: 16px; }
+    .dates { background: #1e1e1e; border-radius: 8px; padding: 14px 16px; margin-bottom: 14px; display: grid; gap: 7px; }
+    .date-row { font-size: 12px; color: #888; display: flex; justify-content: space-between; }
+    .date-row strong { color: #e8e6e0; font-weight: 600; }
+    .k8s { display: flex; align-items: center; gap: 10px; padding: 12px 14px; background: #1e1e1e; border-radius: 8px; margin-bottom: 16px; }
+    .k8s img { height: 22px; width: 22px; object-fit: contain; flex-shrink: 0; }
+    .k8s span { font-size: 13px; color: #888; }
+    .k8s strong { color: #326CE5; }
+    .link { border-top: 0.5px solid #2a2a2a; padding-top: 14px; font-size: 13px; color: #d4502a; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-header">
+      <div class="brand">
+        <div class="logo-wrap">
+          <img src="https://raw.githubusercontent.com/funda-kates/funda-kates/main/assets/logo_no_background.png" alt="" />
+        </div>
+        <span class="wordmark">Funda-Kates</span>
+      </div>
+      <div class="title">Kubernetes Bootcamp</div>
+      <div class="subtitle">Cohort 1 · Limited places</div>
+    </div>
+    <div class="card-body">
+      <div class="desc">Hands-on Kubernetes training in a small cohort. 8 sessions over 4 weeks. Real projects. Beginner-friendly.</div>
+
+      <div class="dates">
+        <div class="date-row"><span>Registration opens</span><strong>29 June 2026</strong></div>
+        <div class="date-row"><span>Starts</span><strong>3 August 2026</strong></div>
+        <div class="date-row"><span>Time</span><strong>18:00 – 19:30 SAST</strong></div>
+        <div class="date-row"><span>Days</span><strong>Mon & Thu</strong></div>
+      </div>
+
+      <div class="k8s">
+        <img src="https://raw.githubusercontent.com/cncf/artwork/main/projects/kubernetes/icon/color/kubernetes-icon-color.png" alt="Kubernetes" />
+        <span>Learn <strong>Kubernetes</strong> — the industry standard for container orchestration</span>
+      </div>
+
+      <div class="link">www.funda.academy/funda-kates →</div>
+    </div>
+  </div>
+</body>
+</html>
