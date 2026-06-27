@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Funda-Kates OG Image</title>
+  <link href="https://googleapis.com" rel="stylesheet"/>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 1200px; height: 630px; overflow: hidden; background: #0b0b0c; font-family: 'Inter', Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+
+    .frame {
+      width: 1200px; height: 630px;
+      background: radial-gradient(circle at 30% 30%, #161618 0%, #0b0b0c 100%);
+      display: flex;
+      position: relative;
+    }
+
+    /* Left accent bar */
+    .accent-bar { width: 6px; height: 100%; background: #d4502a; flex-shrink: 0; }
+
+    /* Left panel */
+    .left {
+      flex: 1;
+      padding: 60px 64px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .brand { display: flex; align-items: center; gap: 14px; }
+    .logo-wrap { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .logo-wrap img { width: 100%; height: 100%; object-fit: contain; display: block; }
+    .wordmark { font-size: 24px; font-weight: 700; color: #ffffff; letter-spacing: -0.03em; }
+
+    .headline-block {}
+    .eyebrow { font-size: 13px; font-weight: 600; color: #d4502a; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 18px; }
+    .headline { font-size: 62px; font-weight: 700; color: #ffffff; line-height: 1.1; letter-spacing: -0.03em; }
+    .headline em { color: #d4502a; font-style: normal; }
+
+    .meta { display: flex; flex-direction: column; gap: 12px; }
+    .meta-row { display: flex; gap: 12px; }
+    .pill { background: #161618; border: 1px solid #262629; border-radius: 6px; padding: 10px 18px; font-size: 14px; font-weight: 500; color: #a1a1aa; }
+    .pill strong { color: #ffffff; font-weight: 600; }
+
+    .url { font-size: 18px; font-weight: 600; color: #d4502a; letter-spacing: -0.01em; margin-top: 10px; }
+
+    /* Right panel */
+    .right {
+      width: 360px;
+      flex-shrink: 0;
+      background: #070708;
+      border-left: 1px solid #1f1f22;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      padding: 40px 36px;
+    }
+
+    .k8s-icon { 
+      width: 130px; height: 130px; 
+      filter: drop-shadow(0 10px 25px rgba(50, 108, 229, 0.15));
+    }
+    .k8s-icon img { width: 100%; height: 100%; object-fit: contain; display: block; }
+
+    .stack { display: flex; flex-direction: column; gap: 12px; width: 100%; }
+    .stack-item { background: #121214; border: 1px solid #222225; border-radius: 6px; padding: 12px 16px; font-size: 11px; font-weight: 600; color: #a1a1aa; letter-spacing: 0.08em; text-transform: uppercase; display: flex; align-items: center; gap: 10px; }
+    .stack-item .dot { width: 8px; height: 8px; border-radius: 50%; background: #d4502a; flex-shrink: 0; }
+    .stack-item.blue .dot { background: #326CE5; }
+    .stack-item.teal .dot { background: #4ade80; }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <div class="accent-bar"></div>
+    <div class="left">
+      <div class="brand">
+        <div class="logo-wrap">
+          <!-- Using the provided Funda-Kates hex-logo asset -->
+          <img src="https://raw.githubusercontent.com/funda-kates/funda-kates/main/assets/logo_no_background.png" alt="Funda-Kates Logo"/>
+        </div>
+        <span class="wordmark">Funda-Kates</span>
+      </div>
+
+      <div class="headline-block">
+        <div class="eyebrow">Kubernetes Bootcamp · Cohort 1 · South Africa</div>
+        <div class="headline">Learn Kubernetes.<br/><em>Get job-ready.</em></div>
+      </div>
+
+      <div class="meta">
+        <div class="meta-row">
+          <div class="pill"><strong>4 weeks</strong> · 8 live sessions</div>
+          <div class="pill"><strong>Mon &amp; Thu</strong> · 18:00–19:30 SAST</div>
+        </div>
+        <div class="meta-row">
+          <div class="pill">Starts <strong>4 Aug 2026</strong></div>
+          <div class="pill">Registration opens <strong>29 Jun 2026</strong></div>
+        </div>
+      </div>
+
+      <div class="url">funda.academy/funda-kates →</div>
+    </div>
+
+    <div class="right">
+      <div class="k8s-icon">
+        <!-- Using the provided Kubernetes wheel asset -->
+        <img src="https://raw.githubusercontent.com/cncf/artwork/main/projects/kubernetes/icon/color/kubernetes-icon-color.png" alt="Kubernetes"/>
+      </div>
+      <div class="stack">
+        <div class="stack-item blue"><span class="dot"></span>Kubernetes</div>
+        <div class="stack-item"><span class="dot"></span>Helm</div>
+        <div class="stack-item teal"><span class="dot"></span>ArgoCD / GitOps</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
