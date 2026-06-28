@@ -13,13 +13,27 @@ const faqSection = document.getElementById('faq');
 const faqToggle = faqSection.querySelector('.faq-section-toggle');
 faqToggle.addEventListener('click', () => faqSection.classList.toggle('faq-section-collapsed'));
 
-document.querySelector('form').addEventListener('submit', function(e) {
-  if (this.querySelector('[name="website"]').value !== '') {
-    e.preventDefault();
+document.getElementById('signup-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  if (this.querySelector('[name="website"]').value !== '') return;
+
+  if (!grecaptcha.getResponse()) {
+    document.getElementById('captcha-error').style.display = 'block';
     return;
   }
-  if (!grecaptcha.getResponse()) {
-    e.preventDefault();
-    document.getElementById('captcha-error').style.display = 'block';
-  }
+
+  const form = this;
+  const btn = form.querySelector('.submit-btn');
+  btn.disabled = true;
+  btn.textContent = 'Submitting…';
+
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    mode: 'no-cors',
+  }).finally(() => {
+    form.hidden = true;
+    document.getElementById('signup-success').hidden = false;
+  });
 });

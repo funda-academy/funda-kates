@@ -241,8 +241,40 @@
         <p>Registrations are open. Fill in your details and we'll send your invoice and cohort details by return.</p>
         <div class="assurance">No payment required at this stage. We'll confirm all details before any commitment is made.</div>
       </div>
-      <div class="fade-in">
-        <form action="https://docs.google.com/forms/d/e/1FAIpQLSftl4jpTYXWjLVwECRi6Dss4slaX-c_R73fsMrNBdfYr0G7ZQ/formResponse" method="POST" target="_blank">
+      <div class="fade-in" id="signup-form-wrap">
+        <div id="signup-success" class="signup-success" hidden>
+          <div class="success-top">
+            <div class="success-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="success-badge">Funda-Kates · Cohort 1</div>
+            <h3 class="success-heading">We've got your details!</h3>
+            <p class="success-body">Thanks for your interest. We've sent an email with your invoice and next steps — your place is secured once payment is received.</p>
+          </div>
+
+          <div class="success-details">
+            <div class="success-detail"><span class="success-detail-label">Starts</span><span class="success-detail-val">4 August 2026</span></div>
+            <div class="success-detail"><span class="success-detail-label">Schedule</span><span class="success-detail-val">Mon &amp; Thu · 18:00–19:30</span></div>
+            <div class="success-detail"><span class="success-detail-label">Duration</span><span class="success-detail-val">4 weeks · 8 sessions</span></div>
+            <div class="success-detail"><span class="success-detail-label">Format</span><span class="success-detail-val">Live · Online (SAST)</span></div>
+          </div>
+
+          <div class="success-next">
+            <div class="success-next-label">What happens next</div>
+            <ul class="success-next-list">
+              <li>A confirmation email is on its way — check your inbox (and spam, just in case).</li>
+              <li>Once payment is confirmed, we'll send cohort details and everything you need to get started.</li>
+              <li>Payment instructions via SnapScan will follow — your spot is held once payment is received.</li>
+            </ul>
+          </div>
+
+          <div class="success-actions">
+            <a href="https://funda.academy/funda-kates" class="btn-primary success-btn-primary">Visit funda.academy/funda-kates</a>
+          </div>
+
+          <p class="success-footer">Questions? Reach us at <a href="mailto:mziyabo@funda.academy">mziyabo@funda.academy</a> · We're excited to have you aboard.</p>
+        </div>
+        <form id="signup-form" action="https://docs.google.com/forms/d/e/1FAIpQLSftl4jpTYXWjLVwECRi6Dss4slaX-c_R73fsMrNBdfYr0G7ZQ/formResponse" method="POST">
           <div class="form-row">
             <div class="form-group">
               <label for="fname">First name</label>
